@@ -46,11 +46,14 @@ document.addEventListener("click", (e) => {
     const heroSection = document.querySelector(".hero");
     const heroImage = document.querySelector(".hero__image");
     const articleSection = document.querySelector(".article");
+    const heroDate = document.querySelector(".hero__date");
+    const heroText = document.querySelector(".hero__text");
 
     header.classList.add("remove-bg");
-    heroSection.style.color = "rgb(9, 9, 1)";
-    heroSection.style.padding = "2.4375rem 1rem 9rem 1rem";
+    heroSection.classList.add("hero--active");
     heroImage.classList.remove("hidden");
+    heroDate.classList.add("hero__date--active");
+    heroText.classList.add("hero__text--active");
     articleSection.classList.remove("hidden");
   }
 });

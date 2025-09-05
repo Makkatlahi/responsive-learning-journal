@@ -191,7 +191,7 @@ li {
   cursor: pointer;
 }
 
-.article {
+.home-article {
   max-width: 23.375rem;
   margin: 0 auto;
   display: flex;
@@ -199,18 +199,37 @@ li {
   gap: 1rem;
 }
 
-.article__title {
+.home-article__title {
   font-size: 1rem;
   font-weight: 700;
 }
 
-.article__text {
+.home-article__text {
 }
 
 .recents-header {
   font-size: 16px;
   text-align: center;
   margin-top: 1.5rem;
+}
+
+.about-article {
+  max-width: 23.375rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.about-article__img {
+  width: 11.375rem;
+}
+
+.about-article__title {
+  font-size: 2.1775rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 /*

@@ -3,6 +3,8 @@ import { blogs } from "./data.js";
 const blogsContainer = document.querySelector(".blogs");
 const viewMoreBtn = document.querySelector(".view-more-btn");
 const viewLessBtn = document.querySelector(".view-less-btn");
+const heroSection = document.querySelector(".hero");
+const homeArticleSection = document.querySelector(".home-article");
 
 blogs.slice(0, 3).forEach((blog) => {
   const blogDiv = document.createElement("div");
@@ -43,17 +45,25 @@ document.addEventListener("click", (e) => {
     });
   } else if (e.target.classList.contains("home")) {
     const header = document.querySelector(".header");
-    const heroSection = document.querySelector(".hero");
     const heroImage = document.querySelector(".hero__image");
-    const articleSection = document.querySelector(".article");
     const heroDate = document.querySelector(".hero__date");
     const heroText = document.querySelector(".hero__text");
+    const aboutArticleSection = document.querySelector(".about-article");
 
+    // Show only home-related sections
     header.classList.add("remove-bg");
+    heroSection.classList.remove("hidden");
     heroSection.classList.add("hero--active");
     heroImage.classList.remove("hidden");
     heroDate.classList.add("hero__date--active");
     heroText.classList.add("hero__text--active");
-    articleSection.classList.remove("hidden");
+    homeArticleSection.classList.remove("hidden");
+    aboutArticleSection.classList.add("hidden");
+  } else if (e.target.classList.contains("about")) {
+    const aboutArticleSection = document.querySelector(".about-article");
+    // Show only about-related section
+    heroSection.classList.add("hidden");
+    aboutArticleSection.classList.remove("hidden");
+    homeArticleSection.classList.remove("hidden");
   }
 });

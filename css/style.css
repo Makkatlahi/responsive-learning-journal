@@ -89,6 +89,7 @@ li {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   gap: 0.193125rem;
+  font-size: 0.847rem;
 }
 
 .header-icon {
@@ -97,7 +98,6 @@ li {
 
 .nav__pages--links {
   gap: 2rem;
-  font-weight: 600;
 }
 
 .link {
@@ -108,6 +108,7 @@ li {
   border: none;
   text-transform: uppercase;
   font-weight: 600;
+  font-size: 0.75rem;
   cursor: pointer;
 }
 
@@ -258,7 +259,7 @@ li {
 
   .blogs {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 2.125rem;
   }
@@ -271,6 +272,42 @@ li {
 
 @media (min-width: 1085px) {
   .hero {
-    padding: 30rem 1rem 1rem 1rem;
+    padding: 20rem 20rem 5rem 4rem;
+  }
+
+  .hero__date {
+    font-size: 1rem;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__text {
+    font-size: 1rem;
+    width: 88%;
+  }
+
+  .header-icon {
+    width: 1.8rem;
+  }
+
+  .nav__title {
+    font-size: 1.25rem;
+  }
+
+  .link {
+    font-size: 1rem;
+  }
+
+  .header::before {
+    background-position: center 66%;
+  }
+
+  .blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2.125rem;
   }
 }

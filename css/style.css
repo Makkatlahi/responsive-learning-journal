@@ -8,6 +8,7 @@
 
 body {
   font-family: "Source Sans 3", sans-serif;
+  background-color: rgba(250, 250, 250, 1);
 }
 
 /*
@@ -257,14 +258,12 @@ li {
   .hero {
     padding: 25rem 1rem 1rem 1rem;
   }
-
   .blogs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 2.125rem;
   }
-
   .blogs__blog {
     max-width: 23.375rem;
     margin: 0 auto;
@@ -285,8 +284,13 @@ li {
     font-size: 1rem;
     width: 88%;
   }
+
   .header-icon {
     width: 1.8rem;
+    margin-left: 2.2rem;
+  }
+  .nav__pages--links {
+    margin-right: 3.3125rem;
   }
   .nav__title {
     font-size: 1.25rem;
@@ -297,10 +301,36 @@ li {
   .header::before {
     background-position: center 64%;
   }
+
+  .hero--active {
+    padding: 4.4375rem 1rem 9rem 1rem;
+    margin: 0 auto;
+    width: 61.1875rem;
+  }
+
+  .article-container {
+    width: 52.625rem;
+    margin: 0 auto;
+  }
+
+  .hero__date--active {
+    margin-bottom: 1.5rem; /*onClick in javascript*/
+  }
+
+  .hero__text--active {
+    margin: 1rem 0 2.2rem 0; /*onClick in javascript*/
+    width: 53rem;
+  }
+
+  .hero__image {
+    height: 488px;
+    object-position: center 67.5%;
+  }
+
   .blogs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1.625rem;
     /* margin-top: 2.125rem; */
     margin: 2.125rem 3.3125rem 2rem 3.3125rem;
   }

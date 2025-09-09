@@ -246,6 +246,10 @@ li {
   display: none !important;
 }
 
+.about-article.hidden {
+  display: none !important;
+}
+
 @media (min-width: 550px) {
   .hero {
     padding: 7rem 1rem 1rem 1rem;
@@ -334,7 +338,7 @@ li {
 
   .home-article {
     max-width: 52.75rem;
-    margin: 0 auto;
+    margin: 4.0625rem auto;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -344,6 +348,26 @@ li {
   .recents-header {
     font-weight: 700;
     font-size: 1.5rem;
+  }
+
+  .about-article {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5.6875rem 3.3125rem 2rem 3.3125rem;
+  }
+
+  .about-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.265rem;
+  }
+
+  .about-article__img {
+    width: 11.375rem;
+    height: 11.375rem;
   }
 
   .blogs {

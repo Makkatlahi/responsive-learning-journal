@@ -6,17 +6,56 @@ const viewLessBtn = document.querySelector(".view-less-btn");
 const heroSection = document.querySelector(".hero");
 const homeArticleSection = document.querySelector(".home-article");
 
-blogs.slice(0, 3).forEach((blog) => {
-  const blogDiv = document.createElement("div");
-  blogDiv.classList.add("blogs__blog");
-  blogDiv.innerHTML = `
+function handleResponsiveBlogs() {
+  blogsContainer.innerHTML = "";
+  if (
+    window.matchMedia("(min-width: 1085px)").matches ||
+    window.matchMedia("(min-width: 850px)").matches
+  ) {
+    blogs.forEach((blog) => {
+      const blogDiv = document.createElement("div");
+      blogDiv.classList.add("blogs__blog");
+      blogDiv.innerHTML = `
   <img class="blogs__blog--image" src="${blog.image}" alt="${blog.altText}"/>
   <p class="blogs__blog--date">${blog.date}</p>
   <h2 class="blogs__blog--title">${blog.title}</h2>
   <p class="blogs__blog--description">${blog.description}</p>
   `;
-  blogsContainer.appendChild(blogDiv);
-});
+      blogsContainer.appendChild(blogDiv);
+    });
+
+    viewLessBtn.classList.add("hidden");
+    viewMoreBtn.classList.add("hidden");
+  } else {
+    blogs.slice(0, 3).forEach((blog) => {
+      const blogDiv = document.createElement("div");
+      blogDiv.classList.add("blogs__blog");
+      blogDiv.innerHTML = `
+  <img class="blogs__blog--image" src="${blog.image}" alt="${blog.altText}"/>
+  <p class="blogs__blog--date">${blog.date}</p>
+  <h2 class="blogs__blog--title">${blog.title}</h2>
+  <p class="blogs__blog--description">${blog.description}</p>
+  `;
+      blogsContainer.appendChild(blogDiv);
+    });
+    viewMoreBtn.classList.remove("hidden");
+  }
+}
+
+handleResponsiveBlogs();
+window.addEventListener("resize", handleResponsiveBlogs);
+
+// blogs.slice(0, 3).forEach((blog) => {
+//   const blogDiv = document.createElement("div");
+//   blogDiv.classList.add("blogs__blog");
+//   blogDiv.innerHTML = `
+//   <img class="blogs__blog--image" src="${blog.image}" alt="${blog.altText}"/>
+//   <p class="blogs__blog--date">${blog.date}</p>
+//   <h2 class="blogs__blog--title">${blog.title}</h2>
+//   <p class="blogs__blog--description">${blog.description}</p>
+//   `;
+//   blogsContainer.appendChild(blogDiv);
+// });
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("view-more-btn")) {

@@ -242,6 +242,10 @@ li {
   display: none;
 }
 
+.home-article.hidden {
+  display: none !important;
+}
+
 @media (min-width: 550px) {
   .hero {
     padding: 7rem 1rem 1rem 1rem;
@@ -325,6 +329,21 @@ li {
   .hero__image {
     height: 488px;
     object-position: center 67.5%;
+    margin-bottom: -2.25rem;
+  }
+
+  .home-article {
+    max-width: 52.75rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .home-article__title,
+  .recents-header {
+    font-weight: 700;
+    font-size: 1.5rem;
   }
 
   .blogs {
